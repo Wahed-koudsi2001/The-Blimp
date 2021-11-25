@@ -1,0 +1,374 @@
+@import "other/variables";
+@import "other/utilites";
+@import "other/animations";
+@import "other/navbar";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Vollkorn", serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    background-color: $secondary-color;
+    box-shadow: 0 1rem 3rem $grey-color;
+    margin: 3.5rem;
+    overflow: hidden;
+    position: relative;
+    @media (max-width: 767px) {
+        margin: 0;
+    }
+    .d-flex {
+        position: relative;
+        .toggle {
+            position: fixed;
+            top: 6.5rem;
+            left: 6.5rem;
+            z-index: 999;
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: 50%;
+            background-color: #fff;
+            flex-direction: column;
+            cursor: pointer;
+            @media (max-width: 767px) {
+                width: 3.5rem;
+                height: 3.5rem;
+                top: 4rem;
+                left: 3rem;
+            }
+            .line {
+                width: 3.5rem;
+                height: 0.2rem;
+                background-color: $light-grey-color;
+                margin: 0.3rem 0;
+                @media (max-width: 767px) {
+                    width: 2.2rem;
+                }
+            }
+        }
+        .letters {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            z-index: 999;
+            display: flex;
+            span {
+                margin: 0.5rem;
+                font-size: 2rem;
+                font-weight: 900;
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+                color: $primary-color;
+                @media (max-width: 767px) {
+                    font-size: 1.2rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+            span:nth-child(1) {
+                animation: up 5s 0.1s infinite;
+            }
+            span:nth-child(2) {
+                animation: up 5s 0.2s infinite;
+            }
+            span:nth-child(3) {
+                animation: up 5s 0.3s infinite;
+            }
+            span:nth-child(4) {
+                animation: up 5s 0.4s infinite;
+            }
+            span:nth-child(5) {
+                animation: up 5s 0.5s infinite;
+            }
+            span:nth-child(6) {
+                animation: up 5s 0.6s infinite;
+            }
+            span:nth-child(7) {
+                animation: up 5s 0.7s infinite;
+            }
+        }
+    }
+    header {
+        background-image: url(../img/header-bg.jpg);
+        width: 100%;
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        perspective: 100rem;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 113, 255, 0.5), rgba(18, 113, 255, 0.3));
+        }
+        .cont {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            .text {
+                flex-basis: 50%;
+                text-align: center;
+                letter-spacing: 0.1rem;
+                text-shadow: 0 0.3rem 0.5rem $grey-color;
+                @media (max-width: 991px) {
+                    flex-basis: 100%;
+                }
+                h1 {
+                    font-size: 8rem;
+                    color: $white-color;
+                    @media (max-width: 767px) {
+                        font-size: 4rem;
+                    }
+                }
+                p {
+                    font-size: 3rem;
+                    max-width: 70rem;
+                    font-weight: 500;
+                    color: $secondary-color;
+                    margin: auto;
+                    @media (max-width: 767px) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            img {
+                width: 30%;
+                animation: image-float 15s linear infinite;
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-image: url(../img/navbar-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        ul {
+            display: flex;
+            transition: all 10s linear;
+            @media (max-width: 991px) {
+                flex-direction: column;
+                height: 90vh;
+            }
+            li {
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                opacity: 0.8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 0.2s;
+                position: relative;
+                top: -100vh;
+                .active {
+                    top: 0;
+                }
+                a {
+                    font-size: 3rem;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: bold;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            li:nth-child(1) {
+                background-color: rgb(100, 149, 237);
+                &.active {
+                    top: 0;
+                }
+            }
+            li:nth-child(2) {
+                background-color: rgb(127, 255, 212);
+                &.active {
+                    top: 0vh;
+                }
+            }
+            li:nth-child(3) {
+                background-color: rgb(255, 160, 122);
+                &.active {
+                    top: 0;
+                }
+            }
+            li:nth-child(4) {
+                background-color: rgb(240, 128, 128);
+                &.active {
+                    top: 0;
+                }
+            }
+            li:nth-child(5) {
+                background-color: rgb(175, 238, 238);
+                &.active {
+                    top: 0;
+                }
+            }
+        }
+        .close {
+            position: fixed;
+            top: 4.5rem;
+            right: 4.5rem;
+            z-index: 999;
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: 50%;
+            background-color: #fff;
+            flex-direction: column;
+            cursor: pointer;
+            @media (max-width: 767px) {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+            .line {
+                width: 3.5rem;
+                height: 0.2rem;
+                background-color: $light-grey-color;
+                @media (max-width: 767px) {
+                    width: 2.5rem;
+                }
+            }
+            div:first-child {
+                transform: translate(0px, 1px) rotate(-45deg);
+            }
+            div:last-child {
+                transform: translate(0px, -2px) rotate(45deg);
+            }
+        }
+    }
+    .pricing {
+        padding: 8rem;
+        h1 {
+            font-size: 8rem;
+            color: $primary-color;
+            text-align: center;
+            text-shadow: 0 0.1rem 0.2rem $primary-color;
+            @media (max-width: 767px) {
+                font-size: 4rem;
+            }
+            @media (max-width: 500px) {
+                font-size: 3rem;
+            }
+        }
+        .row {
+            padding-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 991px) {
+                flex-direction: column;
+            }
+            .box {
+                flex-basis: 30%;
+                display: flex;
+                position: relative;
+                @media (max-width: 991px) {
+                    margin: 2rem 0;
+                }
+                .front {
+                    position: absolute;
+                    z-index: 1;
+                }
+                div:first-child {
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                    h3 {
+                        position: absolute;
+                        bottom: 20px;
+                        right: 10px;
+                        color: $white-color;
+                        font-size: 2rem;
+                        text-align: center;
+                        @media (max-width: 767px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                ul {
+                    background-color: $white-color;
+                    text-align: center;
+                    li {
+                        padding: 2rem 0;
+                        border-bottom: 0.1rem solid $primary-color;
+                        font-size: 1.6rem;
+                        color: $light-grey-color;
+                    }
+                    li:last-child {
+                        border: none;
+                    }
+                }
+                .btn {
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border: none;
+                    font-size: 1.5rem;
+                    color: $light-grey-color;
+                    padding: 0.5rem;
+                    border-radius: 0.3rem;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+                .back {
+                    background-color: $primary-color;
+                    height: 94%;
+                    width: 100%;
+                    position: absolute;
+                    top: 2rem;
+                    color: #fff;
+                    opacity: 0.5;
+                    box-shadow: 0 2rem 4rem #777;
+                    border-radius: 0.3rem;
+                    transform: translateZ(-5rem) translateX(3rem);
+                    .center {
+                        flex-direction: column;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        h2 {
+                            color: $white-color;
+                            font-size: 6rem;
+                            margin-bottom: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

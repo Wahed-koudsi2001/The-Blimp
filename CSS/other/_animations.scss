@@ -1,0 +1,30 @@
+// For Blimp
+@keyframes image-float {
+    0% {
+        width: 30%;
+        opacity: 1;
+    }
+    100% {
+        width: 10%;
+        opacity: 0;
+    }
+}
+
+// For Letters
+@keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(-90%);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
