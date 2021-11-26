@@ -535,4 +535,32 @@ html {
             }
         }
     }
+    footer {
+        background-color: $grey-color;
+        padding: 4rem 0 2rem 0;
+        text-align: center;
+        color: $white-color;
+        ul {
+            width: 70rem;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            li {
+                font-size: 2rem;
+                padding: 0.5rem 2.2rem;
+                cursor: pointer;
+                letter-spacing: 0.3rem;
+                transition: 0.2s linear;
+                &:hover {
+                    box-shadow: 0 2rem 3rem #000;
+                    transform: rotate(-15deg);
+                }
+            }
+        }
+        p {
+            margin-top: 3rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.2rem;
+        }
+    }
 }
