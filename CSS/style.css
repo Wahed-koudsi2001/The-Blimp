@@ -78,6 +78,42 @@
   }
 }
 
+@-webkit-keyframes contact {
+  0% {
+    background-color: #3d3d3d;
+  }
+  25% {
+    background-color: #ced8e4;
+  }
+  50% {
+    background-color: #1e81f3;
+  }
+  75% {
+    background-color: #ff7842;
+  }
+  100% {
+    background-color: #3d3d3d;
+  }
+}
+
+@keyframes contact {
+  0% {
+    background-color: #3d3d3d;
+  }
+  25% {
+    background-color: #ced8e4;
+  }
+  50% {
+    background-color: #1e81f3;
+  }
+  75% {
+    background-color: #ff7842;
+  }
+  100% {
+    background-color: #3d3d3d;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -337,7 +373,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 90vh;
+    height: 100vh;
   }
 }
 
@@ -526,6 +562,7 @@ html {
 
 .container .pricing .row .box div:first-child {
   position: relative;
+  bottom: -4px;
 }
 
 .container .pricing .row .box div:first-child img {
@@ -695,5 +732,159 @@ html {
 .container .opinion .row .col .content p {
   color: #777;
   font-size: 1.5rem;
+}
+
+.container .contact-us {
+  padding: 15rem 0 20rem 0;
+  background-image: url(../img/contact-us-bg.png);
+  background-size: cover;
+  background-position: center;
+  -webkit-animation: contact 20s infinite;
+          animation: contact 20s infinite;
+  position: relative;
+  height: 100%;
+}
+
+.container .contact-us h1 {
+  text-align: center;
+  font-size: 6rem;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .container .contact-us h1 {
+    font-size: 3rem;
+  }
+}
+
+.container .contact-us .box {
+  background-color: #fff;
+  width: 70rem;
+  height: 50rem;
+  margin: 6rem auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1rem 3rem #555;
+          box-shadow: 0 1rem 3rem #555;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .container .contact-us .box {
+    width: initial;
+    height: initial;
+  }
+}
+
+.container .contact-us .box div:first-child {
+  background-color: #eee;
+}
+
+.container .contact-us .box .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0;
+}
+
+.container .contact-us .box .group div {
+  border-radius: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .contact-us .box div {
+  border-radius: 0.4rem;
+}
+
+.container .contact-us .box div label {
+  font-size: 1.2rem;
+  color: #555;
+  padding: 1rem 1rem 0;
+}
+
+.container .contact-us .box div input {
+  border: 0.1px solid #eee;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.container .contact-us .box div input:focus {
+  outline: 0.1rem solid #eee;
+}
+
+.container .contact-us .box div textarea {
+  border: none;
+  resize: none;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.container .contact-us .box div textarea:focus {
+  outline: 0.1rem solid #eee;
+}
+
+.container .contact-us .box .group-2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .contact-us .box .group-2 div {
+  width: 48%;
+  background-color: #eee;
+}
+
+.container .contact-us .box .group-2 div:focus {
+  outline: 0.1rem solid red;
+}
+
+.container .contact-us .box .group-2 div input {
+  background-color: transparent;
+  color: #777;
+}
+
+.container .contact-us .box .btn {
+  background-color: #777;
+  color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  border: none;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.container .contact-us .box .btn:hover {
+  background-color: #555;
+}
+
+.container .contact-us .box .group-3 {
+  background-color: #eee;
 }
 /*# sourceMappingURL=style.css.map */

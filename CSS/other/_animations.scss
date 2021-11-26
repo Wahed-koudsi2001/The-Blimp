@@ -28,3 +28,22 @@
         transform: translateY(0);
     }
 }
+
+// For contact us
+@keyframes contact {
+    0% {
+        background-color: #3d3d3d;
+    }
+    25% {
+        background-color: #ced8e4;
+    }
+    50% {
+        background-color: #1e81f3;
+    }
+    75% {
+        background-color: #ff7842;
+    }
+    100% {
+        background-color: #3d3d3d;
+    }
+}
